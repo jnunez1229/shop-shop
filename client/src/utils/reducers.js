@@ -1,4 +1,4 @@
-
+import {useReducer} from 'react'
 import {
     UPDATE_PRODUCTS,
     UPDATE_CATEGORIES,
@@ -32,3 +32,7 @@ import {
         return state;
     }
   };
+
+  export function useProductReducer(initialState) {
+    return useReducer(reducer, initialState);
+  }
